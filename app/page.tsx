@@ -20,17 +20,75 @@ export default function Home() {
     <main className="min-h-screen bg-gradient-to-b from-blue-400 via-blue-200 to-blue-50">
       {/* Hero Section */}
       <section className="relative overflow-hidden px-6 pt-16 pb-20 sm:pt-20 sm:pb-32 lg:pt-24 lg:pb-40 min-h-screen flex items-center">
-        {/* Logo - Top Left */}
-        <div className="absolute top-6 left-6 z-20 flex items-center gap-2">
-          <Image 
-            src="/avjo-logo.svg" 
-            alt="Avjo AI" 
-            width={40} 
-            height={40}
-            className="w-5 h-5"
-          />
-          <span className="text-xl  font-bold text-white">Avjo.ai</span>
-        </div>
+        {/* Navigation Bar */}
+        <nav className="absolute top-0 left-0 right-0 z-20 px-6 py-4 flex items-center justify-between">
+          {/* Logo */}
+          <div className="flex items-center gap-2">
+            <Image 
+              src="/avjo-logo.svg" 
+              alt="Avjo AI" 
+              width={40} 
+              height={40}
+              className="w-5 h-5"
+            />
+            <span className="text-xl font-bold text-white">Avjo.ai</span>
+          </div>
+          
+          {/* Navigation Links */}
+          <div className="hidden md:flex items-center gap-8">
+            <a 
+              href="#services" 
+              className="text-sm font-medium text-white hover:text-white/80 transition-colors"
+              onClick={(e) => {
+                e.preventDefault();
+                const element = document.getElementById('services');
+                if (element) {
+                  const offsetPosition = element.offsetTop + 120;
+                  window.scrollTo({
+                    top: offsetPosition,
+                    behavior: 'smooth'
+                  });
+                }
+              }}
+            >
+              What we do
+            </a>
+            <a 
+              href="#about" 
+              className="text-sm font-medium text-white hover:text-white/80 transition-colors"
+              onClick={(e) => {
+                e.preventDefault();
+                const element = document.getElementById('about');
+                if (element) {
+                  const offsetPosition = element.offsetTop;
+                  window.scrollTo({
+                    top: offsetPosition,
+                    behavior: 'smooth'
+                  });
+                }
+              }}
+            >
+              Why Choose Us
+            </a>
+            <a 
+              href="#book-call" 
+              className="text-sm px-6 py-2 bg-white text-blue-600 hover:bg-white/90 rounded-lg font-medium transition-colors"
+              onClick={(e) => {
+                e.preventDefault();
+                const element = document.getElementById('book-call');
+                if (element) {
+                  const offsetPosition = element.offsetTop + 50;
+                  window.scrollTo({
+                    top: offsetPosition,
+                    behavior: 'smooth'
+                  });
+                }
+              }}
+            >
+              Free Consultation
+            </a>
+          </div>
+        </nav>
         
         {/* AI-Inspired Background Pattern */}
         <div className="absolute inset-0 z-0 overflow-hidden">
@@ -625,7 +683,7 @@ export default function Home() {
                     }
                   }}
                 >
-                  Services
+                  What we do
                 </a>
                 <a 
                   href="#about" 
