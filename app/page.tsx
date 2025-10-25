@@ -92,6 +92,12 @@ export default function Home() {
               Why Choose Us
             </a>
             <a 
+              href="/careers" 
+              className="text-sm font-medium text-white hover:text-white/80 transition-colors"
+            >
+              Careers
+            </a>
+            <a 
               href="#book-call" 
               className="text-sm px-6 py-2 bg-white text-blue-600 hover:bg-white/90 rounded-lg font-medium transition-colors"
               onClick={(e) => {
@@ -187,6 +193,13 @@ export default function Home() {
                 }}
               >
                 Why Choose Us
+              </a>
+              <a 
+                href="/careers" 
+                className="block text-base font-medium text-white hover:text-white/80 transition-colors py-2"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                Careers
               </a>
               <a 
                 href="#book-call" 
@@ -949,6 +962,12 @@ export default function Home() {
                   }}
                 >
                   Free Consultation
+                </a>
+                <a 
+                  href="/careers" 
+                  className="block text-sm text-gray-600 hover:text-blue-600 transition-colors"
+                >
+                  Careers
                 </a>
                 <Button
                   variant="link"
