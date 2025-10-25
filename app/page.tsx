@@ -26,20 +26,20 @@ export default function Home() {
       <section className="relative overflow-hidden px-6 pt-16 pb-20 sm:pt-20 sm:pb-32 lg:pt-24 lg:pb-40 min-h-screen flex items-center">
         {/* Navigation Bar */}
         <nav className="absolute top-0 left-0 right-0 z-20 px-6 py-4 flex items-center justify-between">
-          {/* Logo */}
-          <div className="flex items-center gap-2">
-          <Image 
-            src="/avjo-logo.svg" 
-            alt="Avjo AI" 
-            width={40} 
-            height={40}
-            className="w-5 h-5"
-          />
-            <span className="text-xl font-bold text-white">Avjo.ai</span>
-          </div>
-          
-          {/* Navigation Links */}
+          {/* Logo and Navigation Links */}
           <div className="hidden md:flex items-center gap-8">
+            {/* Logo */}
+            <div className="flex items-center gap-2">
+              <Image 
+                src="/avjo-logo.svg" 
+                alt="Avjo AI" 
+                width={40} 
+                height={40}
+                className="w-5 h-5"
+              />
+              <span className="text-xl font-bold text-white">Avjo.ai</span>
+            </div>
+            
             <a 
               href="#services" 
               className="text-sm font-medium text-white hover:text-white/80 transition-colors"
@@ -72,7 +72,7 @@ export default function Home() {
                 }
               }}
             >
-              Projects
+              Featured Projects
             </a>
             <a 
               href="#about" 
@@ -97,6 +97,22 @@ export default function Home() {
             >
               Careers
             </a>
+          </div>
+
+          {/* Mobile Logo */}
+          <div className="md:hidden flex items-center gap-2">
+          <Image 
+            src="/avjo-logo.svg" 
+            alt="Avjo AI" 
+            width={40} 
+            height={40}
+            className="w-5 h-5"
+          />
+            <span className="text-xl font-bold text-white">Avjo.ai</span>
+          </div>
+          
+          {/* Free Consultation Button (Desktop) */}
+          <div className="hidden md:block">
             <a 
               href="#book-call" 
               className="text-sm px-6 py-2 bg-white text-blue-600 hover:bg-white/90 rounded-lg font-medium transition-colors"
@@ -174,7 +190,7 @@ export default function Home() {
                   setMobileMenuOpen(false);
                 }}
               >
-                Projects
+                Featured Projects
               </a>
               <a 
                 href="#about" 
@@ -927,7 +943,7 @@ export default function Home() {
                     }
                   }}
                 >
-                  Projects
+                  Featured Projects
                 </a>
                 <a 
                   href="#about" 
