@@ -644,11 +644,11 @@ export default function Home() {
               <h4 className="text-lg font-semibold text-black mb-4">Contact Us</h4>
               <div className="space-y-3">
                 <a 
-                  href="tel:+917487929374" 
+                  href="tel:+916362852619" 
                   className="flex items-center justify-center md:justify-start gap-2 text-gray-600 hover:text-blue-600 transition-colors"
                 >
                   <Phone weight="fill" className="w-5 h-5" />
-                  <span className="text-sm">+91 7487929374</span>
+                  <span className="text-sm">+91 6362852619</span>
                 </a>
                 <a 
                   href="mailto:connectinpersonai@gmail.com" 
@@ -701,6 +701,23 @@ export default function Home() {
                   }}
                 >
                   Why Choose Us
+                </a>
+                <a 
+                  href="#book-call" 
+                  className="block text-sm text-gray-600 hover:text-blue-600 transition-colors"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    const element = document.getElementById('book-call');
+                    if (element) {
+                      const offsetPosition = element.offsetTop + 50;
+                      window.scrollTo({
+                        top: offsetPosition,
+                        behavior: 'smooth'
+                      });
+                    }
+                  }}
+                >
+                  Free Consultation
                 </a>
                 <Button
                   variant="link"
