@@ -338,15 +338,46 @@ export default function Home() {
         <div className="absolute bottom-0 left-0 right-0 h-64 bg-gradient-to-t from-blue-50 via-blue-100/50 to-transparent z-[1]" />
         
         <div className="mx-auto max-w-5xl text-center relative z-10">
-          {/* Badge */}
+          {/* Badge with Border Sparkle Effect */}
           <motion.div
-            className="mb-6 inline-flex items-center gap-2 rounded-full border-2 border-white/30 bg-white/10 backdrop-blur-sm px-4 py-2"
+            className="mb-6 inline-flex items-center gap-2 rounded-full border-2 bg-white/10 backdrop-blur-sm px-4 py-2 relative"
             initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
+            animate={{ 
+              opacity: 1, 
+              scale: 1,
+            }}
             transition={{ duration: 0.6 }}
           >
             <Sparkle weight="fill" className="h-4 w-4 text-white" />
             <span className="text-sm font-medium text-white">AI-Powered Solutions</span>
+            
+            {/* Animated border glow effect */}
+            <motion.div
+              className="absolute inset-0 rounded-full border-2 pointer-events-none"
+              animate={{
+                borderColor: [
+                  'rgba(255, 255, 255, 0)',
+                  'rgba(255, 255, 255, 0.5)',
+                  'rgba(255, 255, 255, 1)',
+                  'rgba(255, 255, 255, 0.5)',
+                  'rgba(255, 255, 255, 0)',
+                ],
+                boxShadow: [
+                  '0 0 0px rgba(255, 255, 255, 0)',
+                  '0 0 10px rgba(255, 255, 255, 0.4), 0 0 20px rgba(255, 255, 255, 0.2)',
+                  '0 0 20px rgba(255, 255, 255, 0.8), 0 0 40px rgba(255, 255, 255, 0.4)',
+                  '0 0 10px rgba(255, 255, 255, 0.4), 0 0 20px rgba(255, 255, 255, 0.2)',
+                  '0 0 0px rgba(255, 255, 255, 0)',
+                ],
+                opacity: [0, 0.5, 1, 0.5, 0],
+              }}
+              transition={{
+                duration: 3,
+                repeat: Infinity,
+                repeatDelay: 4,
+                ease: "easeInOut",
+              }}
+            />
           </motion.div>
           
           {/* Main Headline with Animation */}
