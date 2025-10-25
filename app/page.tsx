@@ -9,6 +9,7 @@ import {
   Sparkle,
   Phone,
   EnvelopeSimple,
+  MapPin,
   ArrowRight
 } from "@phosphor-icons/react";
 import { motion } from "framer-motion";
@@ -103,7 +104,7 @@ export default function Home() {
               data-cal-link="avjo-ai-0szqep/30min"
               data-cal-config='{"layout":"month_view"}'
             >
-              Book a Demo
+              Book a Call
             </Button>
           </motion.div>
         </div>
@@ -336,6 +337,10 @@ export default function Home() {
                   <EnvelopeSimple weight="fill" className="w-5 h-5" />
                   <span className="text-sm">connectinpersonai@gmail.com</span>
                 </a>
+                <div className="flex items-center justify-center md:justify-start gap-2 text-gray-600">
+                  <MapPin weight="fill" className="w-5 h-5" />
+                  <span className="text-sm">Bangalore, India</span>
+                </div>
               </div>
             </div>
             
@@ -356,7 +361,7 @@ export default function Home() {
                   data-cal-link="avjo-ai-0szqep/30min"
                   data-cal-config='{"layout":"month_view"}'
                 >
-                  Book a Demo
+                  Book a Call
                 </Button>
               </div>
             </div>

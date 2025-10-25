@@ -1,0 +1,68 @@
+# Avjo AI - AI-Powered Solutions
+> https://avjo.ai
+
+## About
+
+Avjo AI is an AI-powered agency specializing in building fast, affordable, and stress-free solutions for businesses. We help small and mid-scale businesses automate tasks, build scalable applications, and implement cutting-edge AI technology.
+
+## Services
+
+### AI Automation
+We automate repetitive business tasks and free up teams to focus on what matters most. Our solutions integrate seamlessly with existing workflows and deliver immediate productivity gains.
+
+### Fast Development
+Rapid, scalable application development that grows with business needs. We use modern frameworks and best practices to deliver production-ready applications in weeks, not months.
+
+### Latest AI Tech
+Cutting-edge AI solutions powered by the most advanced technology available today. We stay on the cutting edge of AI advancements to provide clients with competitive advantages.
+
+## Why Choose Avjo AI
+
+- **Experienced Team**: Years of experience building production-ready AI solutions for businesses of all sizes
+- **Latest Technology**: Using the most advanced AI models and frameworks to ensure best results
+- **Fast Delivery**: Quick turnaround without sacrificing quality, getting solutions to market faster
+- **Scalable Solutions**: Applications built to scale with business growth
+
+## Value Proposition
+
+**Turning ideas into reality, fast.** We take your idea from concept to a market-ready product in just a few weeks. Our approach focuses on:
+
+1. Speed: Fast development cycles
+2. Affordability: Cost-effective solutions
+3. Quality: Production-ready applications
+4. Scalability: Built to grow with your business
+
+## Contact
+
+- **Phone**: +91 7487929374
+- **Email**: connectinpersonai@gmail.com
+- **Website**: https://avjo.ai
+- **Book a Demo**: https://avjo.ai/#book-call
+
+## Technology Stack
+
+We work with modern technologies including:
+- Next.js for fast, scalable web applications
+- TypeScript for type-safe development
+- AI/ML frameworks for intelligent solutions
+- Cloud infrastructure for reliable deployment
+
+## Target Audience
+
+We serve small to mid-scale businesses looking to:
+- Automate repetitive tasks with AI
+- Build fast and scalable applications
+- Implement AI solutions quickly
+- Stay competitive with latest technology
+
+## Key Differentiators
+
+1. **AI-First Approach**: Every solution leverages AI for maximum efficiency
+2. **Rapid Development**: Weeks instead of months
+3. **Full-Stack Expertise**: From concept to deployment
+4. **Business Focus**: Solutions that drive real business value
+
+---
+
+Last Updated: January 2025
+
