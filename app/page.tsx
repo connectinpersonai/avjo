@@ -29,7 +29,7 @@ export default function Home() {
             height={40}
             className="w-5 h-5"
           />
-          <span className="text-xl  font-bold text-white">Avjo</span>
+          <span className="text-xl  font-bold text-white">Avjo.ai</span>
         </div>
         
         {/* AI-Inspired Background Pattern */}
@@ -574,7 +574,7 @@ export default function Home() {
                   height={32}
                   className="w-4 h-4 brightness-0"
                 />
-                <span className="text-xl font-bold text-black">Avjo</span>
+                <span className="text-xl font-bold text-black">Avjo.ai</span>
               </div>
               <p className="text-gray-600 text-sm leading-relaxed">
                 Building fast, scalable, and stress-free AI solutions for modern businesses.
