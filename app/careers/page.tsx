@@ -367,19 +367,19 @@ export default function Careers() {
       </section>
 
       {/* Apply Section */}
-      <section className="px-6 pb-24">
+      <section className="px-3 md:px-6 pb-24">
         <div className="max-w-4xl mx-auto">
-          <div className="bg-gradient-to-br from-blue-600 to-blue-500 rounded-2xl p-8 md:p-12 text-center text-white">
-            <h2 className="text-3xl font-bold mb-4">Ready to Join Us?</h2>
-            <p className="text-lg mb-8 text-blue-50">
+          <div className="bg-gradient-to-br from-blue-600 to-blue-500 rounded-2xl p-4 md:p-12 text-center text-white">
+            <h2 className="text-2xl md:text-3xl font-bold mb-4">Ready to Join Us?</h2>
+            <p className="text-base md:text-lg mb-6 md:mb-8 text-blue-50">
               Send your resume and portfolio to our team. We'd love to hear from you!
             </p>
             <a 
               href="mailto:connectinpersonai@gmail.com?subject=Job Application - [Position Name]"
-              className="inline-flex items-center gap-3 px-8 py-4 bg-white text-blue-600 rounded-lg font-semibold hover:bg-blue-50 transition-all shadow-lg hover:shadow-xl"
+              className="inline-flex items-center gap-2 md:gap-3 px-3 md:px-8 py-3 md:py-4 bg-white text-blue-600 rounded-lg font-semibold hover:bg-blue-50 transition-all shadow-lg hover:shadow-xl"
             >
-              <EnvelopeSimple weight="fill" className="w-6 h-6" />
-              <span>connectinpersonai@gmail.com</span>
+              <EnvelopeSimple weight="fill" className="w-5 h-5 md:w-6 md:h-6 flex-shrink-0" />
+              <span className="text-xs md:text-base">connectinpersonai@gmail.com</span>
             </a>
             <p className="text-sm text-blue-100 mt-6">
               Please include the position you're applying for in the subject line
