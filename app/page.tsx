@@ -10,12 +10,16 @@ import {
   Phone,
   EnvelopeSimple,
   MapPin,
-  ArrowRight
+  ArrowRight,
+  List,
+  X
 } from "@phosphor-icons/react";
 import { motion } from "framer-motion";
 import Image from "next/image";
+import { useState } from "react";
 
 export default function Home() {
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   return (
     <main className="min-h-screen bg-gradient-to-b from-blue-400 via-blue-200 to-blue-50">
       {/* Hero Section */}
@@ -24,13 +28,13 @@ export default function Home() {
         <nav className="absolute top-0 left-0 right-0 z-20 px-6 py-4 flex items-center justify-between">
           {/* Logo */}
           <div className="flex items-center gap-2">
-            <Image 
-              src="/avjo-logo.svg" 
-              alt="Avjo AI" 
-              width={40} 
-              height={40}
-              className="w-5 h-5"
-            />
+          <Image 
+            src="/avjo-logo.svg" 
+            alt="Avjo AI" 
+            width={40} 
+            height={40}
+            className="w-5 h-5"
+          />
             <span className="text-xl font-bold text-white">Avjo.ai</span>
           </div>
           
@@ -52,6 +56,23 @@ export default function Home() {
               }}
             >
               What we do
+            </a>
+            <a 
+              href="#projects" 
+              className="text-sm font-medium text-white hover:text-white/80 transition-colors"
+              onClick={(e) => {
+                e.preventDefault();
+                const element = document.getElementById('projects');
+                if (element) {
+                  const offsetPosition = element.offsetTop + 100;
+                  window.scrollTo({
+                    top: offsetPosition,
+                    behavior: 'smooth'
+                  });
+                }
+              }}
+            >
+              Projects
             </a>
             <a 
               href="#about" 
@@ -88,7 +109,106 @@ export default function Home() {
               Free Consultation
             </a>
           </div>
+
+          {/* Mobile Menu Button */}
+          <button 
+            className="md:hidden text-white p-2"
+            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            aria-label="Toggle menu"
+          >
+            {mobileMenuOpen ? (
+              <X weight="bold" className="w-6 h-6" />
+            ) : (
+              <List weight="bold" className="w-6 h-6" />
+            )}
+          </button>
         </nav>
+
+        {/* Mobile Menu */}
+        {mobileMenuOpen && (
+          <motion.div 
+            className="absolute top-[72px] left-0 right-0 z-20 bg-blue-600/95 backdrop-blur-lg md:hidden"
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -20 }}
+            transition={{ duration: 0.2 }}
+          >
+            <div className="px-6 py-4 space-y-4">
+              <a 
+                href="#services" 
+                className="block text-base font-medium text-white hover:text-white/80 transition-colors py-2"
+                onClick={(e) => {
+                  e.preventDefault();
+                  const element = document.getElementById('services');
+                  if (element) {
+                    const offsetPosition = element.offsetTop + 120;
+                    window.scrollTo({
+                      top: offsetPosition,
+                      behavior: 'smooth'
+                    });
+                  }
+                  setMobileMenuOpen(false);
+                }}
+              >
+                What we do
+              </a>
+              <a 
+                href="#projects" 
+                className="block text-base font-medium text-white hover:text-white/80 transition-colors py-2"
+                onClick={(e) => {
+                  e.preventDefault();
+                  const element = document.getElementById('projects');
+                  if (element) {
+                    const offsetPosition = element.offsetTop + 100;
+                    window.scrollTo({
+                      top: offsetPosition,
+                      behavior: 'smooth'
+                    });
+                  }
+                  setMobileMenuOpen(false);
+                }}
+              >
+                Projects
+              </a>
+              <a 
+                href="#about" 
+                className="block text-base font-medium text-white hover:text-white/80 transition-colors py-2"
+                onClick={(e) => {
+                  e.preventDefault();
+                  const element = document.getElementById('about');
+                  if (element) {
+                    const offsetPosition = element.offsetTop;
+                    window.scrollTo({
+                      top: offsetPosition,
+                      behavior: 'smooth'
+                    });
+                  }
+                  setMobileMenuOpen(false);
+                }}
+              >
+                Why Choose Us
+              </a>
+              <a 
+                href="#book-call" 
+                className="block text-base px-6 py-3 bg-white text-blue-600 hover:bg-white/90 rounded-lg font-medium transition-colors text-center"
+                onClick={(e) => {
+                  e.preventDefault();
+                  const element = document.getElementById('book-call');
+                  if (element) {
+                    const offsetPosition = element.offsetTop + 50;
+                    window.scrollTo({
+                      top: offsetPosition,
+                      behavior: 'smooth'
+                    });
+                  }
+                  setMobileMenuOpen(false);
+                }}
+              >
+                Free Consultation
+              </a>
+            </div>
+          </motion.div>
+        )}
         
         {/* AI-Inspired Background Pattern */}
         <div className="absolute inset-0 z-0 overflow-hidden">
@@ -341,11 +461,11 @@ export default function Home() {
               <div className="relative">
                 <div className="flex h-14 w-14 items-center justify-center rounded-xl bg-blue-600 mb-6 group-hover:scale-105 transition-transform duration-300 shadow-lg">
                   <Lightning weight="fill" className="h-7 w-7 text-white" />
-                </div>
+              </div>
                 <h3 className="text-2xl font-semibold mb-3 text-black group-hover:text-blue-600 transition-colors duration-300">AI Automation</h3>
-                <p className="text-gray-600 leading-relaxed">
-                  Automate repetitive business tasks and free up your team to focus on what matters most.
-                </p>
+              <p className="text-gray-600 leading-relaxed">
+                Automate repetitive business tasks and free up your team to focus on what matters most.
+              </p>
               </div>
             </div>
 
@@ -356,9 +476,9 @@ export default function Home() {
                   <RocketLaunch weight="fill" className="h-7 w-7 text-white" />
                 </div>
                 <h3 className="text-2xl font-semibold mb-3 text-black group-hover:text-purple-600 transition-colors duration-300">Fast Development</h3>
-                <p className="text-gray-600 leading-relaxed">
-                  Rapid, scalable application development that grows with your business needs.
-                </p>
+              <p className="text-gray-600 leading-relaxed">
+                Rapid, scalable application development that grows with your business needs.
+              </p>
               </div>
             </div>
 
@@ -374,6 +494,100 @@ export default function Home() {
                 </p>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Projects Section */}
+      <section id="projects" className="relative px-6 py-24 sm:py-32 lg:px-8 bg-gradient-to-b from-white to-gray-50 overflow-hidden">
+        {/* Background Elements */}
+        <div className="absolute inset-0 overflow-hidden pointer-events-none">
+          <div className="absolute top-20 left-20 w-72 h-72 bg-gradient-to-br from-blue-100/20 to-purple-100/20 rounded-full blur-3xl" />
+          <div className="absolute bottom-10 right-20 w-96 h-96 bg-gradient-to-br from-cyan-100/20 to-pink-100/20 rounded-full blur-3xl" />
+        </div>
+
+        <div className="relative mx-auto max-w-7xl">
+          <div className="mx-auto max-w-3xl text-center mb-20">
+            <p className="text-blue-500 text-lg mb-4">
+              Our Work
+            </p>
+            <h2 className="text-4xl font-bold tracking-tight sm:text-5xl lg:text-6xl mb-6 text-black">
+              Featured Projects
+            </h2>
+            <p className="text-xl text-gray-600">
+              Explore some of the innovative AI solutions we've built for our clients.
+            </p>
+          </div>
+
+          <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+            {/* Project Card 1 */}
+            <a 
+              href="#" 
+              className="group relative p-6 rounded-2xl bg-white border border-gray-200 hover:border-blue-300 hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 overflow-hidden"
+            >
+              <div className="absolute inset-0 bg-gradient-to-br from-blue-50/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+              <div className="relative">
+                <div className="w-full h-48 bg-gradient-to-br from-blue-100 to-blue-200 rounded-xl mb-6 flex items-center justify-center">
+                  <span className="text-6xl">🤖</span>
+                </div>
+                <h3 className="text-xl font-semibold mb-2 text-black group-hover:text-blue-600 transition-colors">
+                  AI Chatbot Platform
+                </h3>
+                <p className="text-gray-600 text-sm mb-4">
+                  Custom AI chatbot for customer support automation with 24/7 availability.
+                </p>
+                <span className="inline-flex items-center text-sm font-medium text-blue-600 group-hover:gap-2 transition-all">
+                  View Project
+                  <ArrowRight weight="bold" className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
+                </span>
+              </div>
+            </a>
+
+            {/* Project Card 2 */}
+            <a 
+              href="#" 
+              className="group relative p-6 rounded-2xl bg-white border border-gray-200 hover:border-purple-300 hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 overflow-hidden"
+            >
+              <div className="absolute inset-0 bg-gradient-to-br from-purple-50/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+              <div className="relative">
+                <div className="w-full h-48 bg-gradient-to-br from-purple-100 to-purple-200 rounded-xl mb-6 flex items-center justify-center">
+                  <span className="text-6xl">📊</span>
+                </div>
+                <h3 className="text-xl font-semibold mb-2 text-black group-hover:text-purple-600 transition-colors">
+                  Data Analytics Dashboard
+                </h3>
+                <p className="text-gray-600 text-sm mb-4">
+                  Real-time analytics platform with AI-powered insights and predictions.
+                </p>
+                <span className="inline-flex items-center text-sm font-medium text-purple-600 group-hover:gap-2 transition-all">
+                  View Project
+                  <ArrowRight weight="bold" className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
+                </span>
+              </div>
+            </a>
+
+            {/* Project Card 3 */}
+            <a 
+              href="#" 
+              className="group relative p-6 rounded-2xl bg-white border border-gray-200 hover:border-pink-300 hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 overflow-hidden md:col-span-2 lg:col-span-1"
+            >
+              <div className="absolute inset-0 bg-gradient-to-br from-pink-50/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+              <div className="relative">
+                <div className="w-full h-48 bg-gradient-to-br from-pink-100 to-pink-200 rounded-xl mb-6 flex items-center justify-center">
+                  <span className="text-6xl">⚡</span>
+                </div>
+                <h3 className="text-xl font-semibold mb-2 text-black group-hover:text-pink-600 transition-colors">
+                  Workflow Automation
+                </h3>
+                <p className="text-gray-600 text-sm mb-4">
+                  End-to-end automation solution reducing manual work by 80%.
+                </p>
+                <span className="inline-flex items-center text-sm font-medium text-pink-600 group-hover:gap-2 transition-all">
+                  View Project
+                  <ArrowRight weight="bold" className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
+                </span>
+              </div>
+            </a>
           </div>
         </div>
       </section>
@@ -425,7 +639,7 @@ export default function Home() {
               ease: "linear",
             }}
           />
-          <motion.div
+          <motion.div 
             className="absolute bottom-[20%] left-[15%] w-16 h-16"
             animate={{
               rotate: [0, -90, 0],
@@ -561,7 +775,7 @@ export default function Home() {
         </div>
         
         <div className="relative mx-auto max-w-4xl text-center">
-          <motion.div
+        <motion.div 
             className="inline-block mb-6"
             animate={{
               y: [0, -10, 0],
@@ -583,19 +797,19 @@ export default function Home() {
           </p>
           
           <div>
-            <Button
-              size="lg"
+          <Button
+            size="lg"
               className="relative text-base px-10 py-4 h-auto bg-gradient-to-r from-blue-600 to-blue-500 text-white hover:from-blue-700 hover:to-blue-600 rounded-xl transition-all font-semibold shadow-2xl shadow-blue-600/40 hover:shadow-blue-600/60 hover:scale-105 active:scale-95 group overflow-hidden"
-              data-cal-namespace="30min"
-              data-cal-link="avjo-ai-0szqep/30min"
-              data-cal-config='{"layout":"month_view"}'
-            >
+            data-cal-namespace="30min"
+            data-cal-link="avjo-ai-0szqep/30min"
+            data-cal-config='{"layout":"month_view"}'
+          >
               <span className="relative z-10 flex items-center gap-2">
-                Get Started
+            Get Started
                 <ArrowRight weight="bold" className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </span>
               <div className="absolute inset-0 bg-gradient-to-r from-blue-400 to-purple-400 opacity-0 group-hover:opacity-20 transition-opacity" />
-            </Button>
+          </Button>
           </div>
           
           <p className="mt-6 text-sm text-gray-500">🎯 Free 30-minute consultation • No commitment required</p>
@@ -684,6 +898,23 @@ export default function Home() {
                   }}
                 >
                   What we do
+                </a>
+                <a 
+                  href="#projects" 
+                  className="block text-sm text-gray-600 hover:text-blue-600 transition-colors"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    const element = document.getElementById('projects');
+                    if (element) {
+                      const offsetPosition = element.offsetTop + 100;
+                      window.scrollTo({
+                        top: offsetPosition,
+                        behavior: 'smooth'
+                      });
+                    }
+                  }}
+                >
+                  Projects
                 </a>
                 <a 
                   href="#about" 
