@@ -19,7 +19,7 @@ export default function Home() {
   return (
     <main className="min-h-screen bg-gradient-to-b from-blue-400 via-blue-200 to-blue-50">
       {/* Hero Section */}
-      <section className="relative overflow-hidden px-6 py-20 sm:py-32 lg:py-40 min-h-screen flex items-center">
+      <section className="relative overflow-hidden px-6 pt-16 pb-20 sm:pt-20 sm:pb-32 lg:pt-24 lg:pb-40 min-h-screen flex items-center">
         {/* Logo - Top Left */}
         <div className="absolute top-6 left-6 z-20 flex items-center gap-2">
           <Image 
