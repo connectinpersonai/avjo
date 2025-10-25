@@ -264,44 +264,21 @@ export default function Home() {
         
         <div className="relative mx-auto max-w-7xl">
           <div className="mx-auto max-w-3xl text-center mb-20">
-            <motion.p 
-              className="text-blue-500 text-lg mb-4"
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              viewport={{ once: true }}
-            >
+            <p className="text-blue-500 text-lg mb-4">
               What we do
-            </motion.p>
-            <motion.h2 
-              className="text-4xl font-bold tracking-tight sm:text-5xl lg:text-6xl mb-6 text-black"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
-            >
+            </p>
+            <h2 className="text-4xl font-bold tracking-tight sm:text-5xl lg:text-6xl mb-6 text-black">
               Beautiful solutions
               <br />
               for every business
-            </motion.h2>
-            <motion.p 
-              className="text-xl text-gray-600"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-            >
+            </h2>
+            <p className="text-xl text-gray-600">
               We help small and mid-scale businesses leverage AI to work smarter, not harder.
-            </motion.p>
+            </p>
           </div>
 
           <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
-            <motion.div 
-              className="group relative p-8 rounded-2xl bg-gradient-to-br from-blue-50 to-white border border-blue-100 hover:border-blue-200 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 overflow-hidden"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, amount: 0.2 }}
-              transition={{ duration: 0.6, ease: "easeOut" }}
-            >
+            <div className="group relative p-8 rounded-2xl bg-gradient-to-br from-blue-50 to-white border border-blue-100 hover:border-blue-200 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 overflow-hidden">
               <div className="absolute top-0 right-0 w-32 h-32 bg-blue-100 rounded-full blur-3xl opacity-30 group-hover:opacity-50 transition-opacity duration-300" />
               <div className="relative">
                 <div className="flex h-14 w-14 items-center justify-center rounded-xl bg-blue-600 mb-6 group-hover:scale-105 transition-transform duration-300 shadow-lg">
@@ -312,15 +289,9 @@ export default function Home() {
                   Automate repetitive business tasks and free up your team to focus on what matters most.
                 </p>
               </div>
-            </motion.div>
+            </div>
 
-            <motion.div 
-              className="group relative p-8 rounded-2xl bg-gradient-to-br from-purple-50 to-white border border-purple-100 hover:border-purple-200 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 overflow-hidden"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, amount: 0.2 }}
-              transition={{ duration: 0.6, ease: "easeOut", delay: 0.1 }}
-            >
+            <div className="group relative p-8 rounded-2xl bg-gradient-to-br from-purple-50 to-white border border-purple-100 hover:border-purple-200 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 overflow-hidden">
               <div className="absolute top-0 right-0 w-32 h-32 bg-purple-100 rounded-full blur-3xl opacity-30 group-hover:opacity-50 transition-opacity duration-300" />
               <div className="relative">
                 <div className="flex h-14 w-14 items-center justify-center rounded-xl bg-purple-600 mb-6 group-hover:scale-105 transition-transform duration-300 shadow-lg">
@@ -331,15 +302,9 @@ export default function Home() {
                   Rapid, scalable application development that grows with your business needs.
                 </p>
               </div>
-            </motion.div>
+            </div>
 
-            <motion.div 
-              className="group relative p-8 rounded-2xl bg-gradient-to-br from-pink-50 to-white border border-pink-100 hover:border-pink-200 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 overflow-hidden sm:col-span-2 lg:col-span-1"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, amount: 0.2 }}
-              transition={{ duration: 0.6, ease: "easeOut", delay: 0.2 }}
-            >
+            <div className="group relative p-8 rounded-2xl bg-gradient-to-br from-pink-50 to-white border border-pink-100 hover:border-pink-200 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 overflow-hidden sm:col-span-2 lg:col-span-1">
               <div className="absolute top-0 right-0 w-32 h-32 bg-pink-100 rounded-full blur-3xl opacity-30 group-hover:opacity-50 transition-opacity duration-300" />
               <div className="relative">
                 <div className="flex h-14 w-14 items-center justify-center rounded-xl bg-pink-600 mb-6 group-hover:scale-105 transition-transform duration-300 shadow-lg">
@@ -350,7 +315,7 @@ export default function Home() {
                   Cutting-edge AI solutions powered by the most advanced technology available today.
                 </p>
               </div>
-            </motion.div>
+            </div>
           </div>
         </div>
       </section>
@@ -459,81 +424,47 @@ export default function Home() {
         </div>
         
         <div className="relative mx-auto max-w-6xl">
-          <motion.div 
-            className="text-center mb-20"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-          >
+          <div className="text-center mb-20">
             <h2 className="text-4xl font-bold tracking-tight sm:text-5xl lg:text-6xl mb-6 text-black">
               Why Choose Us?
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               We're not just another AI agency. We're a team of experienced developers and AI specialists who stay on the cutting edge of technology.
             </p>
-          </motion.div>
+          </div>
           
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-            <motion.div 
-              className="group relative p-6 rounded-xl bg-white border-2 border-blue-100 hover:border-blue-400 hover:shadow-2xl hover:shadow-blue-100/50 hover:-translate-y-2 transition-all duration-300"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5 }}
-              whileHover={{ scale: 1.02 }}
-            >
+            <div className="group relative p-6 rounded-xl bg-white border-2 border-blue-100 hover:border-blue-400 hover:shadow-2xl hover:shadow-blue-100/50 hover:-translate-y-2 transition-all duration-300">
               <div className="absolute -top-2 -right-2 w-20 h-20 bg-blue-400/10 rounded-full blur-2xl group-hover:bg-blue-400/20 transition-all duration-300" />
               <h3 className="font-semibold text-lg mb-2 text-black group-hover:text-blue-600 transition-colors">✨ Experienced Team</h3>
               <p className="text-gray-600 text-sm">
                 Years of experience building production-ready AI solutions.
               </p>
-            </motion.div>
+            </div>
             
-            <motion.div 
-              className="group relative p-6 rounded-xl bg-white border-2 border-purple-100 hover:border-purple-400 hover:shadow-2xl hover:shadow-purple-100/50 hover:-translate-y-2 transition-all duration-300"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: 0.1 }}
-              whileHover={{ scale: 1.02 }}
-            >
+            <div className="group relative p-6 rounded-xl bg-white border-2 border-purple-100 hover:border-purple-400 hover:shadow-2xl hover:shadow-purple-100/50 hover:-translate-y-2 transition-all duration-300">
               <div className="absolute -top-2 -right-2 w-20 h-20 bg-purple-400/10 rounded-full blur-2xl group-hover:bg-purple-400/20 transition-all duration-300" />
               <h3 className="font-semibold text-lg mb-2 text-black group-hover:text-purple-600 transition-colors">🚀 Latest Technology</h3>
               <p className="text-gray-600 text-sm">
                 Advanced AI models and frameworks for best results.
               </p>
-            </motion.div>
+            </div>
             
-            <motion.div 
-              className="group relative p-6 rounded-xl bg-white border-2 border-green-100 hover:border-green-400 hover:shadow-2xl hover:shadow-green-100/50 hover:-translate-y-2 transition-all duration-300"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: 0.2 }}
-              whileHover={{ scale: 1.02 }}
-            >
+            <div className="group relative p-6 rounded-xl bg-white border-2 border-green-100 hover:border-green-400 hover:shadow-2xl hover:shadow-green-100/50 hover:-translate-y-2 transition-all duration-300">
               <div className="absolute -top-2 -right-2 w-20 h-20 bg-green-400/10 rounded-full blur-2xl group-hover:bg-green-400/20 transition-all duration-300" />
               <h3 className="font-semibold text-lg mb-2 text-black group-hover:text-green-600 transition-colors">⚡ Fast Delivery</h3>
               <p className="text-gray-600 text-sm">
                 Quick turnaround without sacrificing quality.
               </p>
-            </motion.div>
+            </div>
             
-            <motion.div 
-              className="group relative p-6 rounded-xl bg-white border-2 border-pink-100 hover:border-pink-400 hover:shadow-2xl hover:shadow-pink-100/50 hover:-translate-y-2 transition-all duration-300"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: 0.3 }}
-              whileHover={{ scale: 1.02 }}
-            >
+            <div className="group relative p-6 rounded-xl bg-white border-2 border-pink-100 hover:border-pink-400 hover:shadow-2xl hover:shadow-pink-100/50 hover:-translate-y-2 transition-all duration-300">
               <div className="absolute -top-2 -right-2 w-20 h-20 bg-pink-400/10 rounded-full blur-2xl group-hover:bg-pink-400/20 transition-all duration-300" />
               <h3 className="font-semibold text-lg mb-2 text-black group-hover:text-pink-600 transition-colors">📈 Scalable Solutions</h3>
               <p className="text-gray-600 text-sm">
                 Built to scale with your business growth.
               </p>
-            </motion.div>
+            </div>
           </div>
         </div>
       </section>
@@ -571,13 +502,7 @@ export default function Home() {
           />
         </div>
         
-        <motion.div 
-          className="relative mx-auto max-w-4xl text-center"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-        >
+        <div className="relative mx-auto max-w-4xl text-center">
           <motion.div
             className="inline-block mb-6"
             animate={{
@@ -599,13 +524,10 @@ export default function Home() {
             Book a free consultation call and let's discuss how AI can help automate your workflows and scale your business.
           </p>
           
-          <motion.div
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-          >
+          <div>
             <Button
               size="lg"
-              className="relative text-base px-10 py-4 h-auto bg-gradient-to-r from-blue-600 to-blue-500 text-white hover:from-blue-700 hover:to-blue-600 rounded-xl transition-all font-semibold shadow-2xl shadow-blue-600/40 hover:shadow-blue-600/60 group overflow-hidden"
+              className="relative text-base px-10 py-4 h-auto bg-gradient-to-r from-blue-600 to-blue-500 text-white hover:from-blue-700 hover:to-blue-600 rounded-xl transition-all font-semibold shadow-2xl shadow-blue-600/40 hover:shadow-blue-600/60 hover:scale-105 active:scale-95 group overflow-hidden"
               data-cal-namespace="30min"
               data-cal-link="avjo-ai-0szqep/30min"
               data-cal-config='{"layout":"month_view"}'
@@ -616,10 +538,10 @@ export default function Home() {
               </span>
               <div className="absolute inset-0 bg-gradient-to-r from-blue-400 to-purple-400 opacity-0 group-hover:opacity-20 transition-opacity" />
             </Button>
-          </motion.div>
+          </div>
           
           <p className="mt-6 text-sm text-gray-500">🎯 Free 30-minute consultation • No commitment required</p>
-        </motion.div>
+        </div>
       </section>
 
       {/* Footer */}
