@@ -299,15 +299,15 @@ export default function Home() {
               className="group relative p-8 rounded-2xl bg-gradient-to-br from-blue-50 to-white border border-blue-100 hover:border-blue-200 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 overflow-hidden"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-100px" }}
-              transition={{ duration: 0.5 }}
+              viewport={{ once: true, amount: 0.2 }}
+              transition={{ duration: 0.6, ease: "easeOut" }}
             >
               <div className="absolute top-0 right-0 w-32 h-32 bg-blue-100 rounded-full blur-3xl opacity-30 group-hover:opacity-50 transition-opacity duration-300" />
               <div className="relative">
-                <div className="flex h-14 w-14 items-center justify-center rounded-xl bg-blue-600 mb-6 group-hover:scale-110 group-hover:rotate-6 transition-transform duration-300 shadow-lg">
+                <div className="flex h-14 w-14 items-center justify-center rounded-xl bg-blue-600 mb-6 group-hover:scale-105 transition-transform duration-300 shadow-lg">
                   <Lightning weight="fill" className="h-7 w-7 text-white" />
                 </div>
-                <h3 className="text-2xl font-semibold mb-3 text-black group-hover:text-blue-600 transition-colors">AI Automation</h3>
+                <h3 className="text-2xl font-semibold mb-3 text-black group-hover:text-blue-600 transition-colors duration-300">AI Automation</h3>
                 <p className="text-gray-600 leading-relaxed">
                   Automate repetitive business tasks and free up your team to focus on what matters most.
                 </p>
@@ -318,15 +318,15 @@ export default function Home() {
               className="group relative p-8 rounded-2xl bg-gradient-to-br from-purple-50 to-white border border-purple-100 hover:border-purple-200 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 overflow-hidden"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-100px" }}
-              transition={{ duration: 0.5, delay: 0.1 }}
+              viewport={{ once: true, amount: 0.2 }}
+              transition={{ duration: 0.6, ease: "easeOut", delay: 0.1 }}
             >
               <div className="absolute top-0 right-0 w-32 h-32 bg-purple-100 rounded-full blur-3xl opacity-30 group-hover:opacity-50 transition-opacity duration-300" />
               <div className="relative">
-                <div className="flex h-14 w-14 items-center justify-center rounded-xl bg-purple-600 mb-6 group-hover:scale-110 group-hover:rotate-6 transition-transform duration-300 shadow-lg">
+                <div className="flex h-14 w-14 items-center justify-center rounded-xl bg-purple-600 mb-6 group-hover:scale-105 transition-transform duration-300 shadow-lg">
                   <RocketLaunch weight="fill" className="h-7 w-7 text-white" />
                 </div>
-                <h3 className="text-2xl font-semibold mb-3 text-black group-hover:text-purple-600 transition-colors">Fast Development</h3>
+                <h3 className="text-2xl font-semibold mb-3 text-black group-hover:text-purple-600 transition-colors duration-300">Fast Development</h3>
                 <p className="text-gray-600 leading-relaxed">
                   Rapid, scalable application development that grows with your business needs.
                 </p>
@@ -337,15 +337,15 @@ export default function Home() {
               className="group relative p-8 rounded-2xl bg-gradient-to-br from-pink-50 to-white border border-pink-100 hover:border-pink-200 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 overflow-hidden sm:col-span-2 lg:col-span-1"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-100px" }}
-              transition={{ duration: 0.5, delay: 0.2 }}
+              viewport={{ once: true, amount: 0.2 }}
+              transition={{ duration: 0.6, ease: "easeOut", delay: 0.2 }}
             >
               <div className="absolute top-0 right-0 w-32 h-32 bg-pink-100 rounded-full blur-3xl opacity-30 group-hover:opacity-50 transition-opacity duration-300" />
               <div className="relative">
-                <div className="flex h-14 w-14 items-center justify-center rounded-xl bg-pink-600 mb-6 group-hover:scale-110 group-hover:rotate-6 transition-transform duration-300 shadow-lg">
+                <div className="flex h-14 w-14 items-center justify-center rounded-xl bg-pink-600 mb-6 group-hover:scale-105 transition-transform duration-300 shadow-lg">
                   <Brain weight="fill" className="h-7 w-7 text-white" />
                 </div>
-                <h3 className="text-2xl font-semibold mb-3 text-black group-hover:text-pink-600 transition-colors">Latest AI Tech</h3>
+                <h3 className="text-2xl font-semibold mb-3 text-black group-hover:text-pink-600 transition-colors duration-300">Latest AI Tech</h3>
                 <p className="text-gray-600 leading-relaxed">
                   Cutting-edge AI solutions powered by the most advanced technology available today.
                 </p>
