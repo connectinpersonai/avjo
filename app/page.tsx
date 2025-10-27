@@ -584,10 +584,7 @@ export default function Home() {
             {/* InsightMinds - Featured Project */}
             <motion.div 
               className="group relative rounded-3xl bg-white border-2 border-gray-200 hover:border-purple-300 overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
+              initial={false}
             >
               <div className="absolute inset-0 bg-gradient-to-br from-purple-50/50 via-blue-50/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
               
@@ -694,10 +691,7 @@ export default function Home() {
             {/* Chromatic Labs - Featured Project */}
             <motion.div 
               className="group relative rounded-3xl bg-white border-2 border-gray-200 hover:border-orange-300 overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.2 }}
+              initial={false}
             >
               <div className="absolute inset-0 bg-gradient-to-br from-orange-50/50 via-red-50/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
               
@@ -802,10 +796,7 @@ export default function Home() {
             {/* NovaAI - Featured Project */}
             <motion.div 
               className="group relative rounded-3xl bg-white border-2 border-gray-200 hover:border-green-300 overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.4 }}
+              initial={false}
             >
               <div className="absolute inset-0 bg-gradient-to-br from-green-50/50 via-emerald-50/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
               
