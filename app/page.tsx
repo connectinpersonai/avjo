@@ -17,6 +17,7 @@ import {
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { useState } from "react";
+import { ImageCarousel } from "@/components/image-carousel";
 
 export default function Home() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -579,75 +580,332 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-            {/* Project Card 1 */}
-            <a 
-              href="#" 
-              className="group relative p-6 rounded-2xl bg-white border border-gray-200 hover:border-blue-300 hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 overflow-hidden"
+          <div className="space-y-16">
+            {/* InsightMinds - Featured Project */}
+            <motion.div 
+              className="group relative rounded-3xl bg-white border-2 border-gray-200 hover:border-purple-300 overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
             >
-              <div className="absolute inset-0 bg-gradient-to-br from-blue-50/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-              <div className="relative">
-                <div className="w-full h-48 bg-gradient-to-br from-blue-100 to-blue-200 rounded-xl mb-6 flex items-center justify-center">
-                  <span className="text-6xl">🤖</span>
+              <div className="absolute inset-0 bg-gradient-to-br from-purple-50/50 via-blue-50/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+              
+              <div className="relative grid lg:grid-cols-2 gap-8 p-8 lg:p-12">
+                {/* Left Column - Project Details */}
+                <div className="flex flex-col justify-center space-y-6">
+                  <div>
+                    <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-purple-100 text-purple-700 text-sm font-medium mb-4">
+                      <Brain weight="bold" className="w-4 h-4" />
+                      AI-Powered Healthcare
                 </div>
-                <h3 className="text-xl font-semibold mb-2 text-black group-hover:text-blue-600 transition-colors">
-                  AI Chatbot Platform
+                    <h3 className="text-3xl lg:text-4xl font-bold text-black mb-4 group-hover:text-purple-600 transition-colors">
+                      InsightMinds
                 </h3>
-                <p className="text-gray-600 text-sm mb-4">
-                  Custom AI chatbot for customer support automation with 24/7 availability.
+                    <p className="text-lg text-gray-700 leading-relaxed mb-6">
+                      An innovative therapy analytics platform designed to empower mental health professionals with AI-powered insights and client progress tracking. Revolutionizes mental health care by bridging the gap between therapy sessions with real-time data and insights.
                 </p>
-                <span className="inline-flex items-center text-sm font-medium text-blue-600 group-hover:gap-2 transition-all">
-                  View Project
-                  <ArrowRight weight="bold" className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
-                </span>
               </div>
-            </a>
 
-            {/* Project Card 2 */}
-            <a 
-              href="#" 
-              className="group relative p-6 rounded-2xl bg-white border border-gray-200 hover:border-purple-300 hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 overflow-hidden"
-            >
-              <div className="absolute inset-0 bg-gradient-to-br from-purple-50/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-              <div className="relative">
-                <div className="w-full h-48 bg-gradient-to-br from-purple-100 to-purple-200 rounded-xl mb-6 flex items-center justify-center">
-                  <span className="text-6xl">📊</span>
-                </div>
-                <h3 className="text-xl font-semibold mb-2 text-black group-hover:text-purple-600 transition-colors">
-                  Data Analytics Dashboard
-                </h3>
-                <p className="text-gray-600 text-sm mb-4">
-                  Real-time analytics platform with AI-powered insights and predictions.
-                </p>
-                <span className="inline-flex items-center text-sm font-medium text-purple-600 group-hover:gap-2 transition-all">
-                  View Project
-                  <ArrowRight weight="bold" className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
-                </span>
-              </div>
-            </a>
+                  {/* Key Features */}
+                  <div className="space-y-3">
+                    <h4 className="text-sm font-semibold text-gray-500 uppercase tracking-wide">Key Features</h4>
+                    <div className="grid gap-3">
+                      <div className="flex items-start gap-3">
+                        <div className="mt-1 w-5 h-5 rounded-full bg-purple-100 flex items-center justify-center flex-shrink-0">
+                          <span className="text-purple-600 text-xs">✓</span>
+                        </div>
+                        <div>
+                          <p className="text-sm font-medium text-gray-900">Client Progress Dashboard</p>
+                          <p className="text-xs text-gray-600">Track mood trends, coping mechanisms, and therapeutic goals</p>
+                        </div>
+                      </div>
+                      <div className="flex items-start gap-3">
+                        <div className="mt-1 w-5 h-5 rounded-full bg-purple-100 flex items-center justify-center flex-shrink-0">
+                          <span className="text-purple-600 text-xs">✓</span>
+                        </div>
+                        <div>
+                          <p className="text-sm font-medium text-gray-900">AI-Powered Session Analysis</p>
+                          <p className="text-xs text-gray-600">Leverage cutting-edge AI to analyze therapy sessions</p>
+                        </div>
+                      </div>
+                      <div className="flex items-start gap-3">
+                        <div className="mt-1 w-5 h-5 rounded-full bg-purple-100 flex items-center justify-center flex-shrink-0">
+                          <span className="text-purple-600 text-xs">✓</span>
+                        </div>
+                        <div>
+                          <p className="text-sm font-medium text-gray-900">Sentiment Analysis & Daily Logs</p>
+                          <p className="text-xs text-gray-600">Track emotional patterns and visualize client logs with clustering analysis</p>
+                        </div>
+                      </div>
+                      <div className="flex items-start gap-3">
+                        <div className="mt-1 w-5 h-5 rounded-full bg-purple-100 flex items-center justify-center flex-shrink-0">
+                          <span className="text-purple-600 text-xs">✓</span>
+                        </div>
+                        <div>
+                          <p className="text-sm font-medium text-gray-900">Automated Session Notes</p>
+                          <p className="text-xs text-gray-600">Generate detailed SOAP summaries and transcripts automatically</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
 
-            {/* Project Card 3 */}
-            <a 
-              href="#" 
-              className="group relative p-6 rounded-2xl bg-white border border-gray-200 hover:border-pink-300 hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 overflow-hidden md:col-span-2 lg:col-span-1"
-            >
-              <div className="absolute inset-0 bg-gradient-to-br from-pink-50/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-              <div className="relative">
-                <div className="w-full h-48 bg-gradient-to-br from-pink-100 to-pink-200 rounded-xl mb-6 flex items-center justify-center">
-                  <span className="text-6xl">⚡</span>
+                  {/* Impact Metrics */}
+                  <div className="grid grid-cols-2 gap-4 pt-6 border-t border-gray-200">
+                    <div>
+                      <p className="text-3xl font-bold text-purple-600">75%</p>
+                      <p className="text-sm text-gray-600">Time Saved on Documentation</p>
+                    </div>
+                    <div>
+                      <p className="text-3xl font-bold text-blue-600">3x</p>
+                      <p className="text-sm text-gray-600">Faster Progress Insights</p>
+                    </div>
+                    <div>
+                      <p className="text-3xl font-bold text-green-600">95%</p>
+                      <p className="text-sm text-gray-600">Client Engagement Rate</p>
+                    </div>
+                    <div>
+                      <p className="text-3xl font-bold text-pink-600">24/7</p>
+                      <p className="text-sm text-gray-600">Patient Data Access</p>
+                    </div>
+                  </div>
                 </div>
-                <h3 className="text-xl font-semibold mb-2 text-black group-hover:text-pink-600 transition-colors">
-                  Workflow Automation
-                </h3>
-                <p className="text-gray-600 text-sm mb-4">
-                  End-to-end automation solution reducing manual work by 80%.
-                </p>
-                <span className="inline-flex items-center text-sm font-medium text-pink-600 group-hover:gap-2 transition-all">
-                  View Project
-                  <ArrowRight weight="bold" className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
-                </span>
+
+                {/* Right Column - Image Carousel */}
+                <div className="flex items-center justify-center">
+                  <div className="w-[95%] h-36 sm:h-56 lg:h-72 rounded-2xl overflow-hidden shadow-2xl ring-1 ring-gray-200">
+                    <ImageCarousel
+                      images={[
+                        '/projects/insightminds/analytics.jpg',
+                        '/projects/insightminds/dashboard.jpg',
+                        '/projects/insightminds/sessions.jpg',
+                        '/projects/insightminds/transcript.jpg',
+                        '/projects/insightminds/soap-notes.jpg',
+                        '/projects/insightminds/daily-notes.jpg',
+                      ]}
+                      interval={3000}
+                      className="w-full h-full"
+                    />
+                  </div>
+                </div>
               </div>
-            </a>
+            </motion.div>
+
+            {/* Chromatic Labs - Featured Project */}
+            <motion.div 
+              className="group relative rounded-3xl bg-white border-2 border-gray-200 hover:border-orange-300 overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+            >
+              <div className="absolute inset-0 bg-gradient-to-br from-orange-50/50 via-red-50/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+              
+              <div className="relative grid lg:grid-cols-2 gap-8 p-8 lg:p-12">
+                {/* Left Column - Project Details */}
+                <div className="flex flex-col justify-center space-y-6">
+                  <div>
+                    <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-orange-100 text-orange-700 text-sm font-medium mb-4">
+                      <RocketLaunch weight="bold" className="w-4 h-4" />
+                      AI Video Marketing
+                </div>
+                    <h3 className="text-3xl lg:text-4xl font-bold text-black mb-4 group-hover:text-orange-600 transition-colors">
+                      Chromatic Labs
+                </h3>
+                    <p className="text-lg text-gray-700 leading-relaxed mb-6">
+                      AI-powered video creation platform that revolutionizes social media marketing. Built as an MVP and rapidly scaled to serve 2K+ brands, enabling them to generate professional UGC reels with AI avatars - no shoots, no hiring, no delays.
+                </p>
+              </div>
+
+                  {/* Key Features */}
+                  <div className="space-y-3">
+                    <h4 className="text-sm font-semibold text-gray-500 uppercase tracking-wide">Key Features</h4>
+                    <div className="grid gap-3">
+                      <div className="flex items-start gap-3">
+                        <div className="mt-1 w-5 h-5 rounded-full bg-orange-100 flex items-center justify-center flex-shrink-0">
+                          <span className="text-orange-600 text-xs">✓</span>
+                        </div>
+                        <div>
+                          <p className="text-sm font-medium text-gray-900">AI Avatar Video Generation</p>
+                          <p className="text-xs text-gray-600">50+ realistic AI avatars with realistic lip-sync and emotions</p>
+                        </div>
+                      </div>
+                      <div className="flex items-start gap-3">
+                        <div className="mt-1 w-5 h-5 rounded-full bg-orange-100 flex items-center justify-center flex-shrink-0">
+                          <span className="text-orange-600 text-xs">✓</span>
+                        </div>
+                        <div>
+                          <p className="text-sm font-medium text-gray-900">Competitive Analysis Dashboard</p>
+                          <p className="text-xs text-gray-600">Meta-integrated analytics to track competitors and optimize strategy</p>
+                        </div>
+                      </div>
+                      <div className="flex items-start gap-3">
+                        <div className="mt-1 w-5 h-5 rounded-full bg-orange-100 flex items-center justify-center flex-shrink-0">
+                          <span className="text-orange-600 text-xs">✓</span>
+                        </div>
+                        <div>
+                          <p className="text-sm font-medium text-gray-900">Hybrid Video Creation</p>
+                          <p className="text-xs text-gray-600">Combine recorded footage with AI-generated content seamlessly</p>
+                        </div>
+                      </div>
+                      <div className="flex items-start gap-3">
+                        <div className="mt-1 w-5 h-5 rounded-full bg-orange-100 flex items-center justify-center flex-shrink-0">
+                          <span className="text-orange-600 text-xs">✓</span>
+                        </div>
+                        <div>
+                          <p className="text-sm font-medium text-gray-900">MVP to Scale Architecture</p>
+                          <p className="text-xs text-gray-600">Rapidly scaled infrastructure to handle thousands of concurrent users</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Impact Metrics */}
+                  <div className="grid grid-cols-2 gap-4 pt-6 border-t border-gray-200">
+                    <div>
+                      <p className="text-3xl font-bold text-orange-600">10x</p>
+                      <p className="text-sm text-gray-600">Faster Video Production</p>
+                    </div>
+                    <div>
+                      <p className="text-3xl font-bold text-red-600">90%</p>
+                      <p className="text-sm text-gray-600">Cost Reduction</p>
+                    </div>
+                    <div>
+                      <p className="text-3xl font-bold text-green-600">2K+</p>
+                      <p className="text-sm text-gray-600">Trusted Brands</p>
+                    </div>
+                    <div>
+                      <p className="text-3xl font-bold text-blue-600">29+</p>
+                      <p className="text-sm text-gray-600">Languages Supported</p>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Right Column - Image Carousel */}
+                <div className="flex items-center justify-center">
+                  <div className="w-[95%] h-36 sm:h-56 lg:h-64 rounded-2xl overflow-hidden shadow-2xl ring-1 ring-gray-200">
+                    <ImageCarousel
+                      images={[
+                        '/projects/chromatic-labs/hero.png',
+                        '/projects/chromatic-labs/avatars.png',
+                        '/projects/chromatic-labs/script-creator.png',
+                        '/projects/chromatic-labs/features.png',
+                      ]}
+                      interval={3000}
+                      className="w-full h-full"
+                    />
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+
+            {/* NovaAI - Featured Project */}
+            <motion.div 
+              className="group relative rounded-3xl bg-white border-2 border-gray-200 hover:border-green-300 overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.4 }}
+            >
+              <div className="absolute inset-0 bg-gradient-to-br from-green-50/50 via-emerald-50/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+              
+              <div className="relative grid lg:grid-cols-2 gap-8 p-8 lg:p-12">
+                {/* Left Column - Project Details */}
+                <div className="flex flex-col justify-center space-y-6">
+                  <div>
+                    <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-green-100 text-green-700 text-sm font-medium mb-4">
+                      <Brain weight="bold" className="w-4 h-4" />
+                      Enterprise AI Knowledge
+                </div>
+                    <h3 className="text-3xl lg:text-4xl font-bold text-black mb-4 group-hover:text-green-600 transition-colors">
+                      NovaAI
+                </h3>
+                    <p className="text-lg text-gray-700 leading-relaxed mb-6">
+                      Custom-built enterprise AI knowledge management system for a fast-growing tech startup. Indexes all internal documentation, codebases, and processes, providing instant AI-powered answers and eliminating knowledge silos across the organization.
+                </p>
+              </div>
+
+                  {/* Key Features */}
+                  <div className="space-y-3">
+                    <h4 className="text-sm font-semibold text-gray-500 uppercase tracking-wide">Key Features</h4>
+                    <div className="grid gap-3">
+                      <div className="flex items-start gap-3">
+                        <div className="mt-1 w-5 h-5 rounded-full bg-green-100 flex items-center justify-center flex-shrink-0">
+                          <span className="text-green-600 text-xs">✓</span>
+                        </div>
+                        <div>
+                          <p className="text-sm font-medium text-gray-900">Intelligent Documentation Search</p>
+                          <p className="text-xs text-gray-600">AI-powered search with source citations across all knowledge bases</p>
+                        </div>
+                      </div>
+                      <div className="flex items-start gap-3">
+                        <div className="mt-1 w-5 h-5 rounded-full bg-green-100 flex items-center justify-center flex-shrink-0">
+                          <span className="text-green-600 text-xs">✓</span>
+                        </div>
+                        <div>
+                          <p className="text-sm font-medium text-gray-900">Custom Model Fine-Tuning</p>
+                          <p className="text-xs text-gray-600">Trained on company-specific docs, code, and processes</p>
+                        </div>
+                      </div>
+                      <div className="flex items-start gap-3">
+                        <div className="mt-1 w-5 h-5 rounded-full bg-green-100 flex items-center justify-center flex-shrink-0">
+                          <span className="text-green-600 text-xs">✓</span>
+                        </div>
+                        <div>
+                          <p className="text-sm font-medium text-gray-900">Multi-Source Integration</p>
+                          <p className="text-xs text-gray-600">Automated indexing of Notion, GitHub, Confluence, and Slack</p>
+                        </div>
+                      </div>
+                      <div className="flex items-start gap-3">
+                        <div className="mt-1 w-5 h-5 rounded-full bg-green-100 flex items-center justify-center flex-shrink-0">
+                          <span className="text-green-600 text-xs">✓</span>
+                        </div>
+                        <div>
+                          <p className="text-sm font-medium text-gray-900">Hybrid AI Architecture</p>
+                          <p className="text-xs text-gray-600">Switch between fine-tuned models and general-purpose LLMs</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Impact Metrics */}
+                  <div className="grid grid-cols-2 gap-4 pt-6 border-t border-gray-200">
+                    <div>
+                      <p className="text-3xl font-bold text-green-600">70%</p>
+                      <p className="text-sm text-gray-600">Less Time Searching Docs</p>
+                    </div>
+                    <div>
+                      <p className="text-3xl font-bold text-emerald-600">5x</p>
+                      <p className="text-sm text-gray-600">Faster Onboarding</p>
+                    </div>
+                    <div>
+                      <p className="text-3xl font-bold text-teal-600">90%</p>
+                      <p className="text-sm text-gray-600">Query Accuracy</p>
+                    </div>
+                    <div>
+                      <p className="text-3xl font-bold text-cyan-600">100%</p>
+                      <p className="text-sm text-gray-600">Team Adoption</p>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Right Column - Image Carousel */}
+                <div className="flex items-center justify-center">
+                  <div className="w-[95%] h-36 sm:h-56 lg:h-64 rounded-2xl overflow-hidden shadow-2xl ring-1 ring-gray-200">
+                    <ImageCarousel
+                      images={[
+                        '/projects/novaai/search.png',
+                        '/projects/novaai/answer.png',
+                        '/projects/novaai/documents.png',
+                      ]}
+                      interval={3000}
+                      className="w-full h-full"
+                    />
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+
           </div>
         </div>
       </section>
