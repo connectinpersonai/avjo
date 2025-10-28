@@ -405,7 +405,7 @@ export default function Home() {
               Delivered at
             </motion.span>
             <motion.span 
-              className="block text-white drop-shadow-[0_2px_8px_rgba(0,0,0,0.3)] pl-8 sm:pl-12 lg:pl-16 flex items-center justify-center gap-3"
+              className="block text-white drop-shadow-[0_2px_8px_rgba(0,0,0,0.3)] pl-8 sm:pl-12 lg:pl-16 flex items-center justify-center gap-3 whitespace-nowrap"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.6 }}
