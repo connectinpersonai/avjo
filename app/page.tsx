@@ -24,7 +24,7 @@ export default function Home() {
   return (
     <main className="min-h-screen bg-gradient-to-b from-blue-400 via-blue-200 to-blue-50">
       {/* Hero Section */}
-      <section className="relative overflow-hidden px-6 pt-16 pb-20 sm:pt-20 sm:pb-32 lg:pt-24 lg:pb-40 min-h-screen flex items-center">
+      <section className="relative overflow-hidden px-6 pt-24 pb-20 sm:pt-28 sm:pb-32 lg:pt-32 lg:pb-40 min-h-screen flex items-center">
         {/* Navigation Bar */}
         <nav className="fixed top-0 left-0 right-0 z-50 px-6 py-4 flex items-center justify-between backdrop-blur-md bg-blue-400/80 shadow-sm">
           {/* Logo and Navigation Links */}
