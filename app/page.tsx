@@ -26,7 +26,7 @@ export default function Home() {
       {/* Hero Section */}
       <section className="relative overflow-hidden px-6 pt-16 pb-20 sm:pt-20 sm:pb-32 lg:pt-24 lg:pb-40 min-h-screen flex items-center">
         {/* Navigation Bar */}
-        <nav className="absolute top-0 left-0 right-0 z-20 px-6 py-4 flex items-center justify-between">
+        <nav className="fixed top-0 left-0 right-0 z-50 px-6 py-4 flex items-center justify-between backdrop-blur-md bg-blue-400/80 shadow-sm">
           {/* Logo and Navigation Links */}
           <div className="hidden md:flex items-center gap-8">
             {/* Logo */}
@@ -129,7 +129,7 @@ export default function Home() {
                 }
               }}
             >
-              Free Consultation
+              Talk to an expert
             </a>
           </div>
 
@@ -234,7 +234,7 @@ export default function Home() {
                   setMobileMenuOpen(false);
                 }}
               >
-                Free Consultation
+                Talk to an expert
               </a>
             </div>
           </motion.div>
@@ -394,7 +394,7 @@ export default function Home() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
             >
-              Build Your Product,
+              Your AI Vision,
             </motion.span>
             <motion.span 
               className="block text-white drop-shadow-[0_2px_8px_rgba(0,0,0,0.3)]"
@@ -402,15 +402,15 @@ export default function Home() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
             >
-              Fast, Affordable,
+              Delivered at
             </motion.span>
             <motion.span 
-              className="block text-white drop-shadow-[0_2px_8px_rgba(0,0,0,0.3)]"
+              className="block text-white drop-shadow-[0_2px_8px_rgba(0,0,0,0.3)] pl-8 sm:pl-12 lg:pl-16 flex items-center justify-center gap-3"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.6 }}
             >
-              and Stress-Free
+              Lightning Speed <Lightning weight="fill" className="h-12 w-12 sm:h-14 sm:w-14 lg:h-16 lg:w-16 text-white drop-shadow-[0_2px_8px_rgba(0,0,0,0.3)]" />
             </motion.span>
           </motion.h1>
           
@@ -421,12 +421,14 @@ export default function Home() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.8 }}
           >
-            Turning ideas into reality, fast. Let us take your idea from concept to a market-ready Product in just a few weeks.
+            Most AI projects fail because they're slow, complex, and expensive.
+            <br />
+            Avjo combines deep AI expertise with agile product engineering to help you build real, working AI products that scale — affordably and fast.
           </motion.p>
           
           {/* CTA Button */}
           <motion.div 
-            className="mt-12 flex items-center justify-center"
+            className="mt-11 flex flex-col items-center justify-center gap-3"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 1 }}
@@ -440,6 +442,9 @@ export default function Home() {
             >
               Book a Call
             </Button>
+            {/* <p className="text-sm text-white/80 drop-shadow-[0_1px_4px_rgba(0,0,0,0.3)]">
+              Free 30-minute consultation • No commitment required
+            </p> */}
           </motion.div>
         </div>
       </section>
@@ -512,7 +517,7 @@ export default function Home() {
               for every business
             </h2>
             <p className="text-xl text-gray-600">
-              We help small and mid-scale businesses leverage AI to work smarter, not harder.
+              We help startups and enterprises leverage AI to work smarter, not harder.
             </p>
           </div>
 
@@ -525,7 +530,7 @@ export default function Home() {
               </div>
                 <h3 className="text-2xl font-semibold mb-3 text-black group-hover:text-blue-600 transition-colors duration-300">AI Automation</h3>
               <p className="text-gray-600 leading-relaxed">
-                Automate repetitive business tasks and free up your team to focus on what matters most.
+                Eliminate repetitive work and free your team to focus on growth.
               </p>
               </div>
             </div>
@@ -534,11 +539,11 @@ export default function Home() {
               <div className="absolute top-0 right-0 w-32 h-32 bg-purple-100 rounded-full blur-3xl opacity-30 group-hover:opacity-50 transition-opacity duration-300" />
               <div className="relative">
                 <div className="flex h-14 w-14 items-center justify-center rounded-xl bg-purple-600 mb-6 group-hover:scale-105 transition-transform duration-300 shadow-lg">
-                  <RocketLaunch weight="fill" className="h-7 w-7 text-white" />
+                  <Brain weight="fill" className="h-7 w-7 text-white" />
                 </div>
-                <h3 className="text-2xl font-semibold mb-3 text-black group-hover:text-purple-600 transition-colors duration-300">Fast Development</h3>
+                <h3 className="text-2xl font-semibold mb-3 text-black group-hover:text-purple-600 transition-colors duration-300">Custom & Secure AI</h3>
               <p className="text-gray-600 leading-relaxed">
-                Rapid, scalable application development that grows with your business needs.
+                From chatbots to enterprise systems, we build private, secure AI solutions tailored to your goals.
               </p>
               </div>
             </div>
@@ -547,11 +552,11 @@ export default function Home() {
               <div className="absolute top-0 right-0 w-32 h-32 bg-pink-100 rounded-full blur-3xl opacity-30 group-hover:opacity-50 transition-opacity duration-300" />
               <div className="relative">
                 <div className="flex h-14 w-14 items-center justify-center rounded-xl bg-pink-600 mb-6 group-hover:scale-105 transition-transform duration-300 shadow-lg">
-                  <Brain weight="fill" className="h-7 w-7 text-white" />
+                  <RocketLaunch weight="fill" className="h-7 w-7 text-white" />
                 </div>
-                <h3 className="text-2xl font-semibold mb-3 text-black group-hover:text-pink-600 transition-colors duration-300">Latest AI Tech</h3>
+                <h3 className="text-2xl font-semibold mb-3 text-black group-hover:text-pink-600 transition-colors duration-300">Rapid Prototyping</h3>
                 <p className="text-gray-600 leading-relaxed">
-                  Cutting-edge AI solutions powered by the most advanced technology available today.
+                  MVPs and POCs ready in weeks, so you can test, iterate, and scale.
                 </p>
               </div>
             </div>
@@ -1017,23 +1022,23 @@ export default function Home() {
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
             <div className="group relative p-6 rounded-xl bg-white border-2 border-blue-100 hover:border-blue-400 hover:shadow-2xl hover:shadow-blue-100/50 hover:-translate-y-2 transition-all duration-300">
               <div className="absolute -top-2 -right-2 w-20 h-20 bg-blue-400/10 rounded-full blur-2xl group-hover:bg-blue-400/20 transition-all duration-300" />
-              <h3 className="font-semibold text-lg mb-2 text-black group-hover:text-blue-600 transition-colors">✨ Experienced Team</h3>
+              <h3 className="font-semibold text-lg mb-2 text-black group-hover:text-blue-600 transition-colors">✨ Expert AI Engineers</h3>
               <p className="text-gray-600 text-sm">
-                Years of experience building production-ready AI solutions.
+                Specialists in LLMs, automation, and generative AI.
               </p>
             </div>
             
             <div className="group relative p-6 rounded-xl bg-white border-2 border-purple-100 hover:border-purple-400 hover:shadow-2xl hover:shadow-purple-100/50 hover:-translate-y-2 transition-all duration-300">
               <div className="absolute -top-2 -right-2 w-20 h-20 bg-purple-400/10 rounded-full blur-2xl group-hover:bg-purple-400/20 transition-all duration-300" />
-              <h3 className="font-semibold text-lg mb-2 text-black group-hover:text-purple-600 transition-colors">🚀 Latest Technology</h3>
+              <h3 className="font-semibold text-lg mb-2 text-black group-hover:text-purple-600 transition-colors">🔄 End-to-End Support</h3>
               <p className="text-gray-600 text-sm">
-                Advanced AI models and frameworks for best results.
+                From ideation to deployment and post-launch optimization.
               </p>
             </div>
             
             <div className="group relative p-6 rounded-xl bg-white border-2 border-green-100 hover:border-green-400 hover:shadow-2xl hover:shadow-green-100/50 hover:-translate-y-2 transition-all duration-300">
               <div className="absolute -top-2 -right-2 w-20 h-20 bg-green-400/10 rounded-full blur-2xl group-hover:bg-green-400/20 transition-all duration-300" />
-              <h3 className="font-semibold text-lg mb-2 text-black group-hover:text-green-600 transition-colors">⚡ Fast Delivery</h3>
+              <h3 className="font-semibold text-lg mb-2 text-black group-hover:text-green-600 transition-colors">⚡ Speed & Scalability</h3>
               <p className="text-gray-600 text-sm">
                 Quick turnaround without sacrificing quality.
               </p>
@@ -1041,9 +1046,9 @@ export default function Home() {
             
             <div className="group relative p-6 rounded-xl bg-white border-2 border-pink-100 hover:border-pink-400 hover:shadow-2xl hover:shadow-pink-100/50 hover:-translate-y-2 transition-all duration-300">
               <div className="absolute -top-2 -right-2 w-20 h-20 bg-pink-400/10 rounded-full blur-2xl group-hover:bg-pink-400/20 transition-all duration-300" />
-              <h3 className="font-semibold text-lg mb-2 text-black group-hover:text-pink-600 transition-colors">📈 Scalable Solutions</h3>
+              <h3 className="font-semibold text-lg mb-2 text-black group-hover:text-pink-600 transition-colors">🚀 Latest Technology</h3>
               <p className="text-gray-600 text-sm">
-                Built to scale with your business growth.
+                Advanced AI techniques and frameworks for best results.
               </p>
             </div>
           </div>
@@ -1099,10 +1104,10 @@ export default function Home() {
           </motion.div>
           
           <h2 className="text-4xl font-bold tracking-tight sm:text-5xl lg:text-6xl mb-6 text-black">
-            Ready to Transform Your Business?
+            Ready to Build Your AI Advantage?
           </h2>
           <p className="text-xl text-gray-600 mb-12 max-w-2xl mx-auto">
-            Book a free consultation call and let's discuss how AI can help automate your workflows and scale your business.
+          No sales pitch — just actionable AI strategy tailored to your needs.
           </p>
           
           <div>
@@ -1257,7 +1262,7 @@ export default function Home() {
                     }
                   }}
                 >
-                  Free Consultation
+                  Talk to an expert
                 </a>
                 <a 
                   href="/careers" 
